@@ -1,18 +1,14 @@
-from langchain_core.outputs import Generation
-from langchain_core.prompt_values import PromptValue
-from langchain_huggingface.chat_models import ChatHuggingFace
-from langchain_huggingface import HuggingFaceEndpoint
+# from langchain_core.prompt_values import PromptValue
+# from langchain_huggingface.chat_models import ChatHuggingFace
+# from langchain_huggingface import HuggingFaceEndpoint
 from app.core.config import Settings
 from langchain_core.prompts.chat import (
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
 )
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import PydanticOutputParser, BaseOutputParser
+from langchain_core.output_parsers import PydanticOutputParser
 from app.services.schemas import TransactionAnalysis
-from pydantic import BaseModel, ValidationError
-from typing import Any, TypeVar, Generic
-from langchain_core.runnables.base import RunnableSerializable
 from app.services.parser import RetryWithErrorOutputParser
 from langchain_google_genai.chat_models import ChatGoogleGenerativeAI, ChatGoogleGenerativeAIError
 

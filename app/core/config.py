@@ -14,3 +14,4 @@ class Settings:
     # Configure HuggingFace API Token
     HUGGINGFACE_API_TOKEN: str = os.getenv("HF_TOKEN") or ""
     GOOGLE_GENAI_API: str = os.getenv("GEMINI_API") or ""
+    UPLOAD_DIRECTORY: str = os.getenv("UPLOAD_DIRECTORY") or "./uploads"
